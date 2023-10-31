@@ -14,4 +14,12 @@ class PageController extends Controller
 
         return view('welcome', compact('all_trains'));
     }
+
+    public function today()
+    {
+
+        $today_trains = Train::whereDay('departure_time', '=', date('d'))->get();
+
+        return view('today', compact('today_trains'));
+    }
 }

@@ -10,7 +10,7 @@ class PageController extends Controller
 {
     public function welcome()
     {
-        $all_trains = Train::all();
+        $all_trains = Train::all()->sortBy('departure_time');
 
         return view('welcome', compact('all_trains'));
     }

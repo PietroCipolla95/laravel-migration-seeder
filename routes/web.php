@@ -14,4 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PageController::class, 'welcome']);
+Route::get('/', [PageController::class, 'welcome'])->name('welcome');
+Route::get('today', [PageController::class, 'today'])->name('today');

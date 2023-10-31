@@ -6,8 +6,10 @@
             Trenoolean
         </h1>
         <div class="nav navbar-nav ps-5 fs-5">
-            <a class="nav-item nav-link" href="/">Home</a>
-            <a class="nav-item nav-link" href="#">Today Trains</a>
+            <a class="nav-item nav-link {{ Route::currentRouteName() === 'welcome' ? 'active' : '' }}"
+                href="{{ route('welcome') }}">Home</a>
+            <a class="nav-item nav-link {{ Route::currentRouteName() === 'today' ? 'active' : '' }}"
+                href="{{ route('today') }}">Today Trains</a>
         </div>
     </nav>
 
